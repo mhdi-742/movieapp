@@ -20,6 +20,7 @@ const AppProvider =({children})=>{
           headers:{
             'Content-Type':'application/json',
             'token':localStorage.getItem('token')
+            'Access-Control-Allow-Origin': '*' 
           },
           body:JSON.stringify(l)
         });
@@ -34,6 +35,7 @@ const AppProvider =({children})=>{
         headers:{
           'Content-Type':'application/json',
           'token':localStorage.getItem('token')
+          'Access-Control-Allow-Origin': '*' }
         },
         body:JSON.stringify(l)
       });
@@ -49,6 +51,7 @@ const AppProvider =({children})=>{
         method: 'post',
         headers:{
           'Content-Type':'application/json',
+          'Access-Control-Allow-Origin': '*' }
         },
         body:
           JSON.stringify({
@@ -76,6 +79,7 @@ const AppProvider =({children})=>{
         headers:{
           'Content-Type':'application/json',
           "token": token
+          'Access-Control-Allow-Origin': '*' }
         }
       }).then( async data=>data.json().then(async(data)=>{
         if(!data.error)
@@ -91,6 +95,7 @@ const AppProvider =({children})=>{
           method: 'post',
           headers:{
             'Content-Type':'application/json',
+            'Access-Control-Allow-Origin': '*' }
           },
           body:
             JSON.stringify({
