@@ -17,5 +17,6 @@ app.use(cors(
         credentials:true
     }
 ))
+app.listen("https://movieapp-api-742.vercel.app");
 app.use(express.json());
 app.use(routes);
