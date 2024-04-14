@@ -19,7 +19,7 @@ const AppProvider =({children})=>{
           method: 'post',
           headers:{
             'Content-Type':'application/json',
-            'token':localStorage.getItem('token')
+            'token':localStorage.getItem('token'),
             'Access-Control-Allow-Origin': '*' 
           },
           body:JSON.stringify(l)
@@ -34,7 +34,7 @@ const AppProvider =({children})=>{
         method: 'post',
         headers:{
           'Content-Type':'application/json',
-          'token':localStorage.getItem('token')
+          'token':localStorage.getItem('token'),
           'Access-Control-Allow-Origin': '*' }
         },
         body:JSON.stringify(l)
@@ -78,7 +78,7 @@ const AppProvider =({children})=>{
         method: 'get',
         headers:{
           'Content-Type':'application/json',
-          "token": token
+          "token": token,
           'Access-Control-Allow-Origin': '*' }
         }
       }).then( async data=>data.json().then(async(data)=>{
