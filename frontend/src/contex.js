@@ -15,7 +15,7 @@ const AppProvider =({children})=>{
     let token1=-1,token2=-1;
     //fetch movies
     const delmovies=async(l)=>{
-        const response=fetch("http://localhost:5000/api/del",{
+        const response=fetch("https://movieapp-api-742.vercel.app/api/del",{
           method: 'post',
           headers:{
             'Content-Type':'application/json',
@@ -29,7 +29,7 @@ const AppProvider =({children})=>{
     const fetchwatchlist=async(l)=>{
        var k=fmovie;
        k.push(l)
-       const response=await fetch("http://localhost:5000/api/adddata",{
+       const response=await fetch("https://movieapp-api-742.vercel.app/api/adddata",{
         method: 'post',
         headers:{
           'Content-Type':'application/json',
@@ -45,7 +45,7 @@ const AppProvider =({children})=>{
     }
     //signup
     const signup=async(name,email,password)=>{
-      await fetch ("http://localhost:5000/api/signup",{
+      await fetch ("https://movieapp-api-742.vercel.app/api/signup",{
         method: 'post',
         headers:{
           'Content-Type':'application/json',
@@ -71,7 +71,7 @@ const AppProvider =({children})=>{
     //fetch user details
     const fetchuser=async()=>{
       let token=localStorage.getItem('token');
-      await fetch ("http://localhost:5000/api/data",{
+      await fetch ("https://movieapp-api-742.vercel.app/api/data",{
         method: 'get',
         headers:{
           'Content-Type':'application/json',
@@ -87,7 +87,7 @@ const AppProvider =({children})=>{
 
     //sign in
     const signin=async(email,password)=>{
-        await fetch ("http://localhost:5000/api/signin",{
+        await fetch ("https://movieapp-api-742.vercel.app/signin",{
           method: 'post',
           headers:{
             'Content-Type':'application/json',
