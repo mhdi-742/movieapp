@@ -10,7 +10,7 @@ const { body, validationResult } = require('express-validator');
 const { isNull } = require('lodash');
 const jwt=require('jsonwebtoken');
 const fetchuser = require('../middleware/fetchuser');
-const jwt_sec=process.env.WE_SECURE;
+const jwt_sec=hellomehediharea@7427778;
 router.use(express.json())
 
 router.get('/',(req,res)=>{
