@@ -10,13 +10,7 @@ let cors=require('cors');
 mongoose.connect(url)
 .then((res)=>console.log("connected"))
 .catch((err)=>console.log(err));
-app.use(cors(
-    {
-        origin:["https://movieapp-five-teal.vercel.app"],
-        methords:["POST","GET"],
-        credentials:true
-    }
-))
+app.use(cors())
 app.listen("https://movieapp-api-742.vercel.app");
 app.use(express.json());
 app.use(routes);
