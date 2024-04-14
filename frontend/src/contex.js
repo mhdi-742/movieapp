@@ -87,7 +87,7 @@ const AppProvider =({children})=>{
 
     //sign in
     const signin=async(email,password)=>{
-        await fetch ("https://movieapp-api-742.vercel.app/signin",{
+        await fetch ("https://movieapp-api-742.vercel.app/api/signin",{
           method: 'post',
           headers:{
             'Content-Type':'application/json',
