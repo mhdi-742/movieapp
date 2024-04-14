@@ -12,7 +12,7 @@ mongoose.connect(url)
 .catch((err)=>console.log(err));
 app.use(cors(
     {
-        origin:["https://movieapp-five-teal.vercel.app"],
+        origin:["https://movieapp-p3ifxtmm5-mhdi-742s-projects.vercel.app"],
         methords:["POST","GET"],
         credentials:true
     }
