@@ -19,8 +19,7 @@ const AppProvider =({children})=>{
           method: 'post',
           headers:{
             'Content-Type':'application/json',
-            'token':localStorage.getItem('token'),
-            'Access-Control-Allow-Origin': '*' 
+            'token':localStorage.getItem('token')
           },
           body:JSON.stringify(l)
         });
@@ -34,8 +33,7 @@ const AppProvider =({children})=>{
         method: 'post',
         headers:{
           'Content-Type':'application/json',
-          'token':localStorage.getItem('token'),
-          'Access-Control-Allow-Origin': '*' 
+          'token':localStorage.getItem('token')
         },
         body:JSON.stringify(l)
       });
@@ -50,8 +48,7 @@ const AppProvider =({children})=>{
       await fetch ("https://movieapp-api-742.vercel.app/api/signup",{
         method: 'post',
         headers:{
-          'Content-Type':'application/json',
-          'Access-Control-Allow-Origin': '*' 
+          'Content-Type':'application/json'
         },
         body:
           JSON.stringify({
@@ -78,8 +75,7 @@ const AppProvider =({children})=>{
         method: 'get',
         headers:{
           'Content-Type':'application/json',
-          "token": token,
-          'Access-Control-Allow-Origin': '*' 
+          "token": token
         }
       }).then( async data=>data.json().then(async(data)=>{
         if(!data.error)
@@ -94,8 +90,7 @@ const AppProvider =({children})=>{
         await fetch ("https://movieapp-api-742.vercel.app/api/signin",{
           method: 'post',
           headers:{
-            'Content-Type':'application/json',
-            'Access-Control-Allow-Origin': '*' 
+            'Content-Type':'application/json'
           },
           body:
             JSON.stringify({
