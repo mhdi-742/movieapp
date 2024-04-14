@@ -2,7 +2,7 @@ import React, { useEffect, useState, useContext } from "react";
 import { json } from "react-router";
 const AppContext=React.createContext();
 
-export const ApiUrl=`http://www.omdbapi.com/?apikey=${process.env.REACT_APP_KEY}&`;
+export const ApiUrl=`https://www.omdbapi.com/?apikey=${process.env.REACT_APP_KEY}&`;
 const AppProvider =({children})=>{
   
     const[movie,SetMovie]=useState([]);
