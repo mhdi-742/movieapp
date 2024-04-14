@@ -5,9 +5,10 @@ const bcrypt=require('bcryptjs')
 const app=express();
 const User=require('./models/User')
 const mongoose=require('mongoose');
-const url=process.env.WE_MONGOOSE;
+const url="mongodb+srv://mh7427778:Mh%407427778@blog.bakmqvn.mongodb.net/";
 let cors=require('cors');
 mongoose.connect(url)
+    console.log("connected");
 .then((res)=>console.log("connected"))
 .catch((err)=>console.log(err));
 app.use(cors());
