@@ -50,6 +50,7 @@ router.post("/api/signup",[
     body('email').isEmail(),
     body('password').isLength({ min: 5 }).withMessage('Password must be at least 5 characters long').trim().escape(),
 ],async(req,res)=>{
+    console.log("hello");
     const errors = await validationResult(req);
     const salt= await bcrypt.genSalt(10);
     const pass= await bcrypt.hash(req.body.password,salt);
@@ -68,7 +69,7 @@ router.post("/api/signup",[
      res.send({auth:token});
      user.save();
    }).catch(err=>res.send(err))
-   
+  console.log("bye"); 
 }
 else{
     return res.status(400).json({ errors: errors.array()});
