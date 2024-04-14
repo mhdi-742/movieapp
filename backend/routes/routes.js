@@ -13,6 +13,10 @@ const fetchuser = require('../middleware/fetchuser');
 const jwt_sec=process.env.WE_SECURE;
 router.use(express.json())
 
+router.get('/',(req,res)=>{
+    res.send("hello");
+})
+
 //saving function
 const savewithid =async(id,mid,req,res)=>{
     const data=await List.findOne({"user":id});
@@ -23,7 +27,6 @@ const savewithid =async(id,mid,req,res)=>{
         }
         if(data.mid.includes(mid)===false){
          await data.mid.push(mid);
-        //console.log(data.mid.includes(mid));
         await List.findOneAndUpdate({"user":id},{mid:data.mid},{new:true}).then((err,doc)=>{
             if (err) {
                res.send(err);

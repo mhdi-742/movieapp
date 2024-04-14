@@ -10,7 +10,12 @@ let cors=require('cors');
 mongoose.connect(url)
 .then((res)=>console.log("connected"))
 .catch((err)=>console.log(err));
-app.listen(5000);
-app.use(cors())
+app.use(cors(
+    {
+        origin:[""],
+        methords:["POST","GET"],
+        credentials:true
+    }
+))
 app.use(express.json());
 app.use(routes);
